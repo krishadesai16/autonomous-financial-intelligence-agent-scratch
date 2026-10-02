@@ -272,4 +272,4 @@ with gr.Blocks() as demo:
     run_btn.click(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
     comp_dd.change(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
 
-demo.launch()
+demo.launch(ssr=False)
