@@ -252,7 +252,7 @@ def run_agent(ticker_choice):
         empty = go.Figure()
         return "ERROR", "0%", "N/A", f"Error: {str(e)}", empty, empty, empty, "N/A"
 
-with gr.Blocks(theme=gr.themes.Base()) as demo:
+with gr.Blocks() as demo:
     gr.Markdown("# 📈 Autonomous AI Financial & Market Intelligence Agent")
     gr.Markdown("**Dual BTech + MBA System** — Custom Scratch BiLSTM NLP + Quantitative Risk (VaR) Engine.")
     with gr.Row():
@@ -272,4 +272,4 @@ with gr.Blocks(theme=gr.themes.Base()) as demo:
     run_btn.click(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
     comp_dd.change(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
 
-demo.launch()
+demo.launch(server_name="0.0.0.0", server_port=7860)
