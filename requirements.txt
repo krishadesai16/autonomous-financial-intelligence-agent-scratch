@@ -1,8 +1,7 @@
+gradio==5.20.0
 torch
 yfinance
-feedparser
 scikit-learn
+matplotlib
 pandas
 numpy
-plotly
-gradio
