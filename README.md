@@ -1,6 +1,6 @@
 # 📈 Autonomous AI Financial & Market Intelligence Agent (From Scratch)
 
-> **Academic Capstone:** Dual Degree B.Tech + MBA (Financial Analytics)
+
 
 ## Project Overview
 An autonomous financial market intelligence pipeline built from scratch using PyTorch. The system extracts financial sentiment using a custom Bidirectional LSTM paired with an internal Self-Attention mechanism (zero pre-trained transformers or weights), blends textual signals with quantitative momentum features, estimates 1-Day 95% Value-at-Risk (VaR), and conducts algorithmic strategy backtests against standard benchmarks.
