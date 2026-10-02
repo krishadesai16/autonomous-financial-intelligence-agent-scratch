@@ -2,7 +2,7 @@ gradio==5.20.0
 torch
 yfinance
 scikit-learn
-matplotlib
 pandas
 numpy
 feedparser
+plotly
