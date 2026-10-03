@@ -1,4 +1,6 @@
 import os
+os.environ["GRADIO_SSR_MODE"] = "false"
+
 import json
 import re
 import numpy as np
@@ -272,9 +274,4 @@ with gr.Blocks() as demo:
     run_btn.click(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
     comp_dd.change(fn=run_agent, inputs=[comp_dd], outputs=[sig_box, conf_box, kpi_box, brief_box, price_plt, backtest_plt, sent_plt, news_box])
 
-if __name__ == "__main__":
-    demo.queue().launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        prevent_thread_lock=False
-    )
+demo.launch()
