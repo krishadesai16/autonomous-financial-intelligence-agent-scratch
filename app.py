@@ -67,6 +67,7 @@ model.load_state_dict(torch.load("scratch_model.pt", map_location=device))
 model.eval()
 
 # --- 2. Analytics & Inference Engines ---
+@spaces.GPU
 def predict_scratch_sentiment(headlines):
     if not headlines:
         return 0.0, {"positive": 0.0, "neutral": 1.0, "negative": 0.0}
