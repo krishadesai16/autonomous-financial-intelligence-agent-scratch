@@ -1,6 +1,7 @@
 import os
 os.environ["GRADIO_SSR_MODE"] = "false"
 
+import spaces
 import json
 import re
 import numpy as np
@@ -16,7 +17,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # --- 1. Model & Tokenizer Definitions ---
 class ScratchTokenizer:
